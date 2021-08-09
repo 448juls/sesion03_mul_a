@@ -19,6 +19,11 @@ public class Esferica {
         float p=(float)Math.sqrt(Math.pow(z, 2)+Math.pow(radio, 2));
         return new Esferica(p, angulo,(float)Math.toDegrees(Math.acos(z/p)));
     }
+    
+    public Cilindrica esferica_cilindrica(float radioS, float angulox, float anguloz){
+        float p=(float)Math.sqrt(Math.pow(radioS, 2)*Math.sin(anguloz));
+        return new Cilindrica(p, angulox,radioS*(float)Math.cos(anguloz));
+    }
 
     public float getRadioS() {
         return radioS;
